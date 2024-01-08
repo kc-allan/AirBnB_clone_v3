@@ -6,7 +6,8 @@ from flask import jsonify, abort, request
 
 @app_views.route('/users', methods=['GET'])
 def get_all_users():
-    users = storage.all(User)
+    users = storage.all(User).values()
+    users = [user.to_dict() for user in users]
     return jsonify(users)
 
 
@@ -22,7 +23,7 @@ def delete_user(user_id):
     user = storage.get(User, user_id)
     if user is None:
         abort(404)
-    user.delete()
+    storage.delete(user)
     return jsonify({}), 200
 
 

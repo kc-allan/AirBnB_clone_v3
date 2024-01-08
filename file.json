@@ -1,0 +1,204 @@
+{
+	"User.f8d5aef4-a8d6-452c-ae9f-2844295e6c70": {
+		"first_name": "Jane",
+		"last_name": "Doe",
+		"email": "janed0e52@gmail.com",
+		"password": "qwerty1234",
+		"created_at": "2024-01-08T14:04:15.006536",
+		"updated_at": "2024-01-08T14:04:15.006593",
+		"id": "f8d5aef4-a8d6-452c-ae9f-2844295e6c70",
+		"__class__": "User"
+	},
+	"User.3abb7ff0-319b-449b-a265-b34596066365": {
+		"first_name": "Mickey",
+		"last_name": "Mouse",
+		"email": "disneymickey@gmail.com",
+		"password": "myPassw0rd1?",
+		"created_at": "2024-01-08T14:04:15.009106",
+		"updated_at": "2024-01-08T14:04:15.009155",
+		"id": "3abb7ff0-319b-449b-a265-b34596066365",
+		"__class__": "User"
+	},
+	"User.186df507-7796-4c81-aad0-aff1eef65fe8": {
+		"first_name": "Ryan",
+		"last_name": "Kiptoo",
+		"email": "kipryan@gmail.com",
+		"password": "c4terp!llar",
+		"created_at": "2024-01-08T14:04:15.011217",
+		"updated_at": "2024-01-08T14:04:15.011255",
+		"id": "186df507-7796-4c81-aad0-aff1eef65fe8",
+		"__class__": "User"
+	},
+	"State.5ccd3818-9243-4d8e-bae1-5216f31a3ea3": {
+		"id": "5ccd3818-9243-4d8e-bae1-5216f31a3ea3",
+		"created_at": "2024-01-08T14:06:54.192802",
+		"updated_at": "2024-01-08T14:06:54.192831",
+		"__class__": "State"
+	},
+	"State.68580414-4db6-4c67-a8a7-ae85ced47d1f": {
+		"id": "68580414-4db6-4c67-a8a7-ae85ced47d1f",
+		"created_at": "2024-01-08T14:06:54.197240",
+		"updated_at": "2024-01-08T14:06:54.197380",
+		"__class__": "State"
+	},
+	"State.3cbe7f2b-dd75-45fd-8fd0-c60dcefcbcef": {
+		"id": "3cbe7f2b-dd75-45fd-8fd0-c60dcefcbcef",
+		"created_at": "2024-01-08T14:06:54.200246",
+		"updated_at": "2024-01-08T14:06:54.200330",
+		"__class__": "State"
+	},
+	"City.1752f902-fc8c-4ebe-ba25-a1aff1f5277e": {
+		"state_id": "3cbe7f2b-dd75-45fd-8fd0-c60dcefcbcef",
+		"name": "Nairobi",
+		"created_at": "2024-01-08T14:10:17.237211",
+		"updated_at": "2024-01-08T14:10:17.237256",
+		"id": "1752f902-fc8c-4ebe-ba25-a1aff1f5277e",
+		"__class__": "City"
+	},
+	"City.fc17fc10-e8c0-4f78-81ee-009309be433b": {
+		"state_id": "68580414-4db6-4c67-a8a7-ae85ced47d1f",
+		"name": "Nakuru",
+		"created_at": "2024-01-08T14:10:17.239914",
+		"updated_at": "2024-01-08T14:10:17.239967",
+		"id": "fc17fc10-e8c0-4f78-81ee-009309be433b",
+		"__class__": "City"
+	},
+	"City.2abe9f75-39a7-4ad8-9e3f-608222f2a001": {
+		"state_id": "5ccd3818-9243-4d8e-bae1-5216f31a3ea3",
+		"name": "Muranga",
+		"created_at": "2024-01-08T14:10:17.242772",
+		"updated_at": "2024-01-08T14:10:17.242806",
+		"id": "2abe9f75-39a7-4ad8-9e3f-608222f2a001",
+		"__class__": "City"
+	},
+	"City.a6d3529a-d3d7-4d1e-9093-a9418c926593": {
+		"state_id": "5ccd3818-9243-4d8e-bae1-5216f31a3ea3",
+		"name": "Kiambu",
+		"created_at": "2024-01-08T14:10:17.245396",
+		"updated_at": "2024-01-08T14:10:17.245435",
+		"id": "a6d3529a-d3d7-4d1e-9093-a9418c926593",
+		"__class__": "City"
+	},
+	"Place.c0632786-1e76-4dea-ac30-0cdb2c2fa817": {
+		"city_id": "fc17fc10-e8c0-4f78-81ee-009309be433b",
+		"user_id": "3abb7ff0-319b-449b-a265-b34596066365",
+		"description": "",
+		"number_rooms": "3",
+		"number_bathrooms": "2",
+		"max_guest": "6",
+		"price_by_night": "9000",
+		"latitude": "-27.3763",
+		"longitude": "0.16773",
+		"created_at": "2024-01-08T14:13:27.648456",
+		"updated_at": "2024-01-08T14:13:27.648557",
+		"id": "c0632786-1e76-4dea-ac30-0cdb2c2fa817",
+		"__class__": "Place"
+	},
+	"Place.b382ab9d-65eb-4471-a2a2-07b7f33f961f": {
+		"city_id": "1752f902-fc8c-4ebe-ba25-a1aff1f5277e",
+		"user_id": "f8d5aef4-a8d6-452c-ae9f-2844295e6c70",
+		"name": "Kilimani",
+		"description": "",
+		"number_rooms": "2",
+		"number_bathrooms": "1",
+		"max_guest": "4",
+		"price_by_night": "7000",
+		"latitude": "-2.1983",
+		"longitude": "0.3388",
+		"created_at": "2024-01-08T14:13:27.652290",
+		"updated_at": "2024-01-08T14:13:27.652429",
+		"id": "b382ab9d-65eb-4471-a2a2-07b7f33f961f",
+		"__class__": "Place"
+	},
+	"Place.e7d1d344-28c8-4935-ace6-3e9ada2f65f5": {
+		"city_id": "2abe9f75-39a7-4ad8-9e3f-608222f2a001",
+		"user_id": "3abb7ff0-319b-449b-a265-b34596066365",
+		"description": "",
+		"number_rooms": "4",
+		"number_bathrooms": "2",
+		"max_guest": "8",
+		"price_by_night": "12000",
+		"latitude": "-1.98392",
+		"longitude": "0.676458",
+		"created_at": "2024-01-08T14:13:27.656277",
+		"updated_at": "2024-01-08T14:13:27.656388",
+		"id": "e7d1d344-28c8-4935-ace6-3e9ada2f65f5",
+		"__class__": "Place"
+	},
+	"Place.e4946727-c707-47c2-a08d-76cdb8bdcb2d": {
+		"city_id": "a6d3529a-d3d7-4d1e-9093-a9418c926593",
+		"user_id": "186df507-7796-4c81-aad0-aff1eef65fe8",
+		"name": "Livingstone",
+		"description": "",
+		"number_rooms": "1",
+		"number_bathrooms": "1",
+		"max_guest": "2",
+		"price_by_night": "4000",
+		"latitude": "0.03883",
+		"longitude": "2.657677",
+		"created_at": "2024-01-08T14:13:27.659747",
+		"updated_at": "2024-01-08T14:13:27.659847",
+		"id": "e4946727-c707-47c2-a08d-76cdb8bdcb2d",
+		"__class__": "Place"
+	},
+	"Amenity.3bb58c69-d7a2-4f38-a230-74a3ea478f6c": {
+		"name": "Swimming",
+		"created_at": "2024-01-08T14:14:28.828354",
+		"updated_at": "2024-01-08T14:14:28.828424",
+		"id": "3bb58c69-d7a2-4f38-a230-74a3ea478f6c",
+		"__class__": "Amenity"
+	},
+	"Amenity.c2f0c977-3a52-4ca2-a1b8-6e7cbecbb16d": {
+		"name": "Gym",
+		"created_at": "2024-01-08T14:14:28.831925",
+		"updated_at": "2024-01-08T14:14:28.831962",
+		"id": "c2f0c977-3a52-4ca2-a1b8-6e7cbecbb16d",
+		"__class__": "Amenity"
+	},
+	"Amenity.8160832a-e68c-42a2-9729-269dc28b2c8a": {
+		"id": "8160832a-e68c-42a2-9729-269dc28b2c8a",
+		"created_at": "2024-01-08T14:14:28.835110",
+		"updated_at": "2024-01-08T14:14:28.835124",
+		"__class__": "Amenity"
+	},
+	"Amenity.5472ecde-4462-430e-a5a1-d40e0676ada4": {
+		"id": "5472ecde-4462-430e-a5a1-d40e0676ada4",
+		"created_at": "2024-01-08T14:14:28.837999",
+		"updated_at": "2024-01-08T14:14:28.838015",
+		"__class__": "Amenity"
+	},
+	"Review.8067f869-eea8-4679-b3dd-bff79ec643bd": {
+		"place_id": "e7d1d344-28c8-4935-ace6-3e9ada2f65f5",
+		"user_id": "3abb7ff0-319b-449b-a265-b34596066365",
+		"text": "Awesome",
+		"created_at": "2024-01-08T14:17:22.263773",
+		"updated_at": "2024-01-08T14:17:22.263888",
+		"id": "8067f869-eea8-4679-b3dd-bff79ec643bd",
+		"__class__": "Review"
+	},
+	"Review.8340d888-287c-43f4-baf2-cdbe177550a5": {
+		"place_id": "e4946727-c707-47c2-a08d-76cdb8bdcb2d",
+		"user_id": "186df507-7796-4c81-aad0-aff1eef65fe8",
+		"text": "Great",
+		"created_at": "2024-01-08T14:17:22.267833",
+		"updated_at": "2024-01-08T14:17:22.267989",
+		"id": "8340d888-287c-43f4-baf2-cdbe177550a5",
+		"__class__": "Review"
+	},
+	"Review.c0b97f63-f193-4343-8842-6ef2e462ebd0": {
+		"place_id": "b382ab9d-65eb-4471-a2a2-07b7f33f961f",
+		"user_id": "f8d5aef4-a8d6-452c-ae9f-2844295e6c70",
+		"created_at": "2024-01-08T14:17:22.273166",
+		"updated_at": "2024-01-08T14:17:22.273349",
+		"id": "c0b97f63-f193-4343-8842-6ef2e462ebd0",
+		"__class__": "Review"
+	},
+	"Review.dee9e375-d2ca-4097-ab6e-70865a6dff1e": {
+		"place_id": "e4946727-c707-47c2-a08d-76cdb8bdcb2d",
+		"user_id": "186df507-7796-4c81-aad0-aff1eef65fe8",
+		"created_at": "2024-01-08T14:17:22.277545",
+		"updated_at": "2024-01-08T14:17:22.277659",
+		"id": "dee9e375-d2ca-4097-ab6e-70865a6dff1e",
+		"__class__": "Review"
+	}
+}
