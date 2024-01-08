@@ -63,6 +63,8 @@ def update_city(city_id):
     req = request.get_json()
     if not isinstance(req, dict):
         abort(400, "Not a JSON")
+    to_be_ignored = []
     for key, val in req.items():
-        setattr(city, key, val)
+        if key not in to_be_ignored:
+            setattr(city, key, val)
     return jsonify(city), 200

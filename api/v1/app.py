@@ -11,10 +11,10 @@ from api.v1.views import app_views
 from flask import jsonify
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
+app.register_blueprint(app_views)
 # Enable CORS code for task 12
 CORS(app, resources={r'/api/v1/*': {'origins': '0.0.0.0'}})
-app.register_blueprint(app_views)
-app.url_map.strict_slashes = False
 
 
 @app.teardown_appcontext
@@ -31,8 +31,7 @@ def not_found(error):
     """0
     Return errmsg `Not Found`.
     """
-    response = {'error': 'Not found'}
-    return jsonify(response), 404
+    return jsonify(error='Not found'), 404
 
 
 if __name__ == '__main__':
