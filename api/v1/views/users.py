@@ -9,4 +9,6 @@ def get_all_users():
     users = storage.all(User)
     return jsonify(users)
 @app_views.route('/api/v1/users/<user_id>', methods=['GET'])
-def get_user_by_id(user_id)
+def get_user_by_id(user_id):
+    user = storage.get(User, user_id)
+    return user
