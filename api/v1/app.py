@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-Creates a new Flask app
+Creates the flask app server
 """
-
 from flask import Flask
 from flask_cors import CORS
 from os import getenv
@@ -35,6 +34,9 @@ def not_found(error):
 
 
 if __name__ == '__main__':
+    """
+    Run the flask server
+    """
     HOST = '0.0.0.0' if getenv(
         'HBNB_API_HOST'
     ) is None else getenv('HBNB_API_HOST')
