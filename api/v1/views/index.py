@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Create a route `/status` on the object app_views.
+"""Create a route `/status` on the object app_views.
 """
 # Import the required modules
 from api.v1.views import app_views
