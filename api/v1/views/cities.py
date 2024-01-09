@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Creates the API endpoint for City objects
+"""
 from models.city import City
 from models.state import State
 from models import storage
