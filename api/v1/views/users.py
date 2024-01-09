@@ -30,6 +30,7 @@ def delete_user(user_id):
     if user is None:
         abort(404)
     storage.delete(user)
+    storage.save()
     return jsonify({}), 200
 
 
@@ -46,6 +47,7 @@ def create_user():
     user = User()
     for key, val in details.items():
         setattr(user, key, val)
+    storage.save()
     return jsonify(user.to_dict()), 201
 
 
@@ -62,4 +64,5 @@ def update_user(user_id):
     for key, val in details.items():
         if key not in to_be_ignored:
             setattr(user, key, val)
+    storage.save()
     return jsonify(user.to_dict()), 200
