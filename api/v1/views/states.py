@@ -16,7 +16,7 @@ def get_states():
     return jsonify(states)
 
 # Route for finding specific states
-@app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
+@app_views.route('/states/<string:state_id>', methods=['GET'], strict_slashes=False)
 def get_state(state_id):
     """get state information for specified state"""
     state = storage.get("State", state_id)
@@ -25,7 +25,7 @@ def get_state(state_id):
     return jsonify(state.to_dict())
 
 # Route for deleting states
-@app_views.route('/states/<state_id>', methods=['DELETE'], strict_slashes=False)
+@app_views.route('/states/<string:state_id>', methods=['DELETE'], strict_slashes=False)
 def delete_state(state_id):
     """deletes a state based on its state_id"""
     state = storage.get("State", state_id)
@@ -36,7 +36,7 @@ def delete_state(state_id):
     return (jsonify({}))
 
 # Route for creating new states
-@app_views.route('/states', methods=['POST'], strict_slashes=False)
+@app_views.route('/states/', methods=['POST'], strict_slashes=False)
 def create_state():
     """create a new state"""
     if not request.get_json():
@@ -48,7 +48,7 @@ def create_state():
     return make_response(jsonify(state.to_dict()), 201)
 
 # Route for updating states
-@app_views.route('/states/<state_id>', methods=['PUT'], strict_slashes=False)
+@app_views.route('/states/<string:state_id>', methods=['PUT'], strict_slashes=False)
 def update_state(state_id):
     """update a state"""
     state = storage.get("State", state_id)
