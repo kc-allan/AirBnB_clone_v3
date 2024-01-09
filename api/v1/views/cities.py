@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Routes for cities.py"""
 from models.city import City
 from models.state import State
 from models import storage
