@@ -5,6 +5,7 @@ from models import storage
 from models.user import User
 from flask import jsonify, abort, request
 
+
 @app_views.route('/users', methods=['GET'])
 def get_all_users():
     """Get all users"""
@@ -20,6 +21,7 @@ def get_user_by_id(user_id):
     if user is None:
         abort(404)
     return jsonify(user.to_dict())
+
 
 @app_views.route('/users/<user_id>', methods=['DELETE'])
 def delete_user(user_id):
@@ -45,6 +47,7 @@ def create_user():
     for key, val in details.items():
         setattr(user, key, val)
     return jsonify(user.to_dict()), 201
+
 
 @app_views.route('/users/<user_id>', methods=['PUT'])
 def update_user(user_id):
