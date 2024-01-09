@@ -1,5 +1,6 @@
-#!/usr/bin/python3\
-"""Creates the flask app server"""
+#!/usr/bin/python3
+'''Creates the flask app API.
+'''
 from flask import Flask
 from flask_cors import CORS
 from os import getenv
