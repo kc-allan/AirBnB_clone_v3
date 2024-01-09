@@ -32,10 +32,12 @@ def get_city(city_id):
 
 @app_views.route('/cities/<city_id>', methods=['DELETE'])
 def delete_city(city_id):
-    obj = storage.get(City, city_id)
-    if obj is None:
+    city = storage.get(City, city_id)
+    print(city)
+    if city is None:
         abort(404)
-    obj.delete()
+    storage.delete(city)
+    storage.save()
     return jsonify({}), 200
 
 
@@ -52,6 +54,7 @@ def create_city_in_state(state_id):
     new_city = City()
     new_city.state_id = state_id
     new_city.name = req['name']
+    new_city.save()
     return jsonify(new_city.to_dict()), 201
 
 

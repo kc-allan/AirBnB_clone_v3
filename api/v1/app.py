@@ -13,12 +13,12 @@ from flask import jsonify
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 app.register_blueprint(app_views)
-# Enable CORS code for task 12
-CORS(app, resources={r'/api/v1/*': {'origins': '0.0.0.0'}})
+# Enable CORS code for task 2
+CORS(app, resources={'/api/v1/*': {'origins': '0.0.0.0'}})
 
 
 @app.teardown_appcontext
-def teardown_appcontext(exception):
+def teardown_flask(exception):
     """
     Removes the current SQLAlchemy Session object after each request.
     """
@@ -28,7 +28,7 @@ def teardown_appcontext(exception):
 # Error handlers for expected app behavior:
 @app.errorhandler(404)
 def not_found(error):
-    """0
+    """
     Return errmsg `Not Found`.
     """
     return jsonify(error='Not found'), 404

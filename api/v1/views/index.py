@@ -22,8 +22,7 @@ def api_status():
     """
     Returns a JSON response for RESTful API status.
     """
-    response = {"status": "OK"}
-    return jsonify(response)
+    return jsonify(status="OK")
 
 
 @app_views.route('/stats', strict_slashes=False)
@@ -35,7 +34,3 @@ def hbnb_stats():
     for key, value in hbnbStats.items():
         return_dict[key] = storage.count(value)
     return jsonify(return_dict)
-
-
-if __name__ == "__main__":
-    pass
