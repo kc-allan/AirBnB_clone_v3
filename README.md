@@ -161,6 +161,7 @@ Natalie Wanjiru - [Github](https://github.com/Wanjiruwanjiku-tech) / [Twitter](h
 Allan Cheruiyot - [Github](https://github.com/kc-allan) / [Twitter](https://twitter.com/kc_allan_)
 
 Second part of Airbnb: Joann Vuong
+Third part of Airbnb : Natalie Wanjiru, Allan Cheruiyot 
 ## License
 Public Domain. No copy write protection. 
 
