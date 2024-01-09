@@ -17,11 +17,10 @@ def get_cities_by_state(state_id):
         abort(404)
     cities = storage.all(City)
     filtered_cities = []
-    for key, val in cities.items():
-        new = {}
-        new[key] = val.to_dict()
-        if (new[key])["state_id"] == state_id:
-            filtered_cities.append(new)
+    for val in cities.values():
+        city = val.to_dict()
+        if city['state_id'] == state_id:
+            filtered_cities.append(city)
     return jsonify(filtered_cities)
 
 
