@@ -39,6 +39,7 @@ def delete_review(review_id):
     if review is None:
         abort(404)
     storage.delete(review)
+    storage.save()
     return jsonify({}), 200
 
 
@@ -58,6 +59,7 @@ def create_review(place_id):
     review = Review()
     for key, val in details.items():
         setattr(review, key, val)
+    storage.save()
     return jsonify(review.to_dict())
 
 
@@ -74,4 +76,5 @@ def update_review(review_id):
     for key, val in details.items():
         if key not in to_be_ignored:
             setattr(review, key, val)
+    storage.save()
     return jsonify(review.to_dict()), 200
