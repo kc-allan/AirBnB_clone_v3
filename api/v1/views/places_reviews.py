@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""The module defines routes for place_views"""
+
 from api.v1.views import app_views
 from models import storage
 from models.review import Review
@@ -7,6 +9,7 @@ from flask import jsonify, abort, request
 
 @app_views.route('/places/<place_id>/reviews', methods=['GET'])
 def get_reviews_by_place(place_id):
+    """Get all place reviews"""
     place = storage.get(Place, place_id)
     if place is None:
         abort(404)
@@ -16,6 +19,7 @@ def get_reviews_by_place(place_id):
 
 @app_views.route('/reviews/<review_id>', methods=['GET'])
 def get_review(review_id):
+    """Get specific reviews"""
     review = storage.get(Review, review_id)
     if review is None:
         abort(404)
@@ -23,6 +27,7 @@ def get_review(review_id):
 
 @app_views.route('/reviews/<review_id>', methods=['DELETE'])
 def delete_review(review_id):
+    """Delete a review"""
     review = storage.get(Review, review_id)
     if review is None:
         abort(404)
@@ -31,6 +36,7 @@ def delete_review(review_id):
 
 @app_views.route('/places/<place_id>/reviews', methods=['POST'])
 def create_review(place_id):
+    """Create a review"""
     place = storage.get(Place, place_id)
     if place is None:
         abort(404)
@@ -48,6 +54,7 @@ def create_review(place_id):
 
 @app_views.route('/reviews/<review_id>', methods=['PUT'])
 def update_review(review_id):
+    """Update reviews"""
     review = storage.get(Review, review_id)
     if review is None:
         abort(404)
